@@ -13,8 +13,8 @@ on:
   #   types: started
 
 env:
-  PATCH_FLAG: true
-  COMMIT: 1a37d561b2b51c23cd33bdcf4fc1670c404dcb8f
+  PATCH_FLAG: false
+  COMMIT: 0
   DEPOT_UPLOAD: false
   SRC_UPLOAD: true
   BINARY_UPLOAD: false
@@ -46,7 +46,7 @@ jobs:
     - name: fetch v8
       run: |
         source ~/.bash_profile
-        fetch v8
+        fetch --nohistory v8
         cd v8
     
     # patch source code
